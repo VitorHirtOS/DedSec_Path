@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.home{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    background: #1E1E1E;
+}
+
+.home_left, .home_right{
+    flex: 1;
+    overflow: hidden;
+}
+
+.home_left{
+    background-image: url(../Image/Background-Dark.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+}
+
+.home_right{
+    position: relative;
+}
+
+.home_right .square{
+    position: absolute;
+    right: 0;
+    font-size: 2.5rem;
+    color: #7E7E7E;
+}
+
+.home_right div:nth-child(2) img{
+    width: 70%;
+}
+
+.inputSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.inputSection div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2
+}
+
+.inputSection .formsInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputSection div, form{
+    flex: 1
+}
+
+form div > .name, .password{
+    border: 1px solid #7E7E7E;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    color: #7E7E7E !important;
+    font-size: 1rem;
+}
+
+form div .name .password > input{
+    padding: .5rem;
+    color: #7E7E7E !important;
+}
+
+form div div input{
+    width: 20rem;
+    padding: .3rem;
+    border: none;
+    background: transparent;
+    color: #7E7E7E;
+    font-size: 1rem;
+}
+
+form div div input:focus{
+    outline: none;
+    background: transparent;
+}
+
+form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_left::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(84, 84, 85, 0.5);
+    border-radius: 10px;
+}
+
+.home_left div{
+    color: white;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'JetBrains Mono';
+}
+
+.home_left div p:nth-child(1){
+    transform: translateX(-5rem);
+}
+
+.home_left div p:nth-child(2){
+    transform: translateX(5rem);
+}
+
+.logoDedSec{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    z-index: 1;
+}
+
+.logoDedSec img{
+    width: 10rem;
+}
+
+@media (max-width: 1000px){
+    .home_left{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .logoDedSec{
+        display: none !important;
+    }
+}
+
+@media (max-width: 400px){
+    .home_right div:nth-child(2) img{
+        width: 15rem;
+    }
+
+    form div div input{
+        width: 13rem;
+    }
+}
+
+@media ((orientation: landscape) and (max-width: 900px)){
+    .inputSection > .blockDedSec{
+        display: none !important;
+    }
+}
