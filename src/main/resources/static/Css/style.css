@@ -171,7 +171,7 @@ form div{
     }
 }
 
-@media ((orientation: landscape) and (max-width: 900px)){
+@media (orientation: landscape) and (max-width: 900px){
     .inputSection > .blockDedSec{
         display: none !important;
     }
