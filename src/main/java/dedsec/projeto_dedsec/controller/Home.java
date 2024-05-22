@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-public class HomeController {
+public class Home {
 
     @Autowired
     private UserRepository userRepository;
@@ -19,6 +19,7 @@ public class HomeController {
     @GetMapping("/")
     public String layout(Model model){
         model.addAttribute("pageTitle", "DedSec");
+        model.addAttribute("content", "home/index");
         return "layout";
     }
 

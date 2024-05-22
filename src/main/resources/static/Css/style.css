@@ -149,6 +149,19 @@ form div{
     width: 10rem;
 }
 
+.btn{
+    width: 23rem;
+    padding: .3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-family: 'JetBrains Mono';
+    border: none;
+    background-color: #403f3f;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
 @media (max-width: 1000px){
     .home_left{
         display: none;
