@@ -3,8 +3,8 @@ package dedsec.projeto_dedsec.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity(name = "dedsec")
-@Table(name = "dedsec")
+@Entity(name = "users")
+@Table(name = "users")
 @Data
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -14,9 +14,9 @@ public class UserModel {
     @Id @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    @Column(name = "nome")
-    private String nome;
-    @Column(name = "senha")
-    private String senha;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "password")
+    private String password;
 
 }
