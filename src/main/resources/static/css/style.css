@@ -23,7 +23,7 @@
 }
 
 .home_left{
-    background-image: url(../Image/Background-Dark.png);
+    background-image: url(../image/Background-Dark.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -73,7 +73,7 @@
     flex: 1
 }
 
-form div > .name, .password{
+.name > label, .password > label{
     border: 1px solid #7E7E7E;
     display: flex;
     flex-direction: row;
@@ -82,6 +82,17 @@ form div > .name, .password{
     border-radius: 5px;
     color: #7E7E7E !important;
     font-size: 1rem;
+}
+
+.name > p, .password > p{
+    color: red;
+    font-family: 'JetBrains Mono';
+    margin: .5rem;
+}
+
+label > i{
+    display: flex !important;
+    align-items: center !important;
 }
 
 form div .name .password > input{
