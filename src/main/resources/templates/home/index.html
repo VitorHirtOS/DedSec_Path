@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Representante</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css" /> <!-- Caminho absoluto para o CSS -->
+    <link rel="shortcut icon" href="/image/Icons.png" type="image/x-icon"> <!-- Caminho absoluto para o ícone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="home">
+    <div class="logoDedSec">
+        <img th:src="@{image/DedSec.png}" alt="DedSec"> <!-- Usando o mapeamento do Thymeleaf para o recurso -->
+    </div>
+    <div class="home_left">
+        <div>
+            <p>DecSec</p>
+            <p>Security</p>
+        </div>
+    </div>
+    <div class="home_right">
+        <div class="square">
+            <i class="fa-brands fa-squarespace"></i>
+        </div>
+        <div class="inputSection">
+            <div class="blockDedSec">
+                <img th:src="@{/image/DedSec.png}" alt="DesSec"> <!-- Usando o mapeamento do Thymeleaf para o recurso -->
+            </div>
+            <div class="formsInput">
+                <!--/*@thymesVar id="userModel" type=""*/-->
+                <form th:action="@{/home}" method="post" th:object="${userModel}">
+                    <div>
+                        <div class="name">
+                            <p th:if="${error}" th:text="${error}"></p>
+                            <label>
+                                <input placeholder="Nome" type="text" id="name" name="name" autocomplete="off" th:field="*{name}">
+                                <i class="fa-solid fa-user"></i>
+                            </label>
+                        </div>
+                        <div class="password">
+                            <p th:if="${error}" th:text="${error}"></p>
+                            <label>
+                                <input placeholder="Senha" type="password" id="senha" name="senha" autocomplete="off" th:field="*{password}">
+                                <i class="fa-solid fa-lock"></i>
+                            </label>
+                        </div>
+                        <div>
+                            <button class="btn" type="submit">Logar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
