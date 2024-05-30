@@ -27,8 +27,8 @@ public class HomeController {
         return "home/index";
     }
 
-    @PostMapping(value = "/menuLogin")
-    public String menuLogin(@ModelAttribute UserModel userModel, Model model) {
+    @PostMapping(value = "/home")
+    public String menu(@ModelAttribute UserModel userModel, Model model) {
 
         if (userModel.getName() == null || userModel.getName().isEmpty()) {
             // Nome de usuário não informado
@@ -57,6 +57,11 @@ public class HomeController {
             return "home/index";
         }
 
+    }
+
+    @GetMapping("/menu")
+    public String menu(Model model) {
+        return "menu/index";
     }
 
 }

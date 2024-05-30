@@ -6,6 +6,7 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    font-family: "JetBrains Mono";
 }
 
 .home{
@@ -199,4 +200,143 @@ form div{
     .inputSection > .blockDedSec{
         display: none !important;
     }
+}
+
+/* Menu - Home */
+
+.home_menu{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #131313;
+}
+
+.home_menu > div{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.home_absolute{
+    display: flex;
+    flex-direction: column;
+}
+
+.home_absolute > div:nth-child(2){
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home_menu > .menu_left{
+    flex: 1;
+    background-image: url(../image/Background-Dark.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.home_absolute{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.home_menu > .menu_left::before{
+    content: "";
+    background-color: rgba(64, 63, 63, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.home_menu > .menu_right{
+    flex: 5;
+    background-color: #1E1E1E;
+}
+
+.menu_top{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.menu_top > div:nth-child(3){
+    background-color: #7E7E7E;
+    height: 1px;
+    width: 90%;
+    position: absolute;
+    bottom: 0
+}
+
+.menu_top > div:nth-child(1){
+    font-size: 3.5rem;
+    color: #7E7E7E;
+}
+
+.menu_top > div:nth-child(1){
+    max-width: 1200px;
+}
+
+.menu_top > div:nth-child(2){
+    font-size: 1.5rem;
+    color: #7E7E7E;
+}
+
+.menu_top > div:nth-child(2) > p:nth-child(1){
+    margin-left: -1.3rem;
+}
+
+.menu_top > div:nth-child(2) > p:nth-child(2){
+    margin-left: 1.3rem;
+}
+
+.menu_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7E7E7E;
+}
+
+.menu_center{
+    padding: 1rem;
+}
+
+.menu_center div:nth-child(1) nav > a > ul {
+   margin-bottom: 1rem;
+}
+
+.menu_center a{
+    color: #7E7E7E;
+    font-size: 1.3rem;
+}
+
+.menu_bottom button{
+     border: none;
+    background: #7E7E7E;
+    padding: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.menu_bottom > div:nth-child(2){
+    text-align: center;
+    color: #7E7E7E;
 }
